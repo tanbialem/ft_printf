@@ -6,7 +6,7 @@
 /*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/03 12:20:37 by username         #+#    #+#              */
-/*   Updated: 2026/11/09 20:20:49 by username        ###   ########.fr        */
+/*   Updated: 2026/11/09 20:24:04 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,17 @@ void	ft_putchar(char str)
 	return (0);
 }
 
-void	ft_putstr(char *str)
+int	ft_putstr(char *str)
 {
+	int	i;
+
+	if (!str)
+		return (-1);
+	i = 0;
+	while (str[i])
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+	return (0);
 }
